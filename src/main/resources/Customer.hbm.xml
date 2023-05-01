@@ -18,7 +18,7 @@
             <column name="name"></column>
         </property>
 
-        <set name="orders" table="orders">
+        <set name="orders" table="orders" lazy="true">
             <key column="cid"></key>
             <one-to-many class="com.hollow.entity.Orders"></one-to-many>
         </set>

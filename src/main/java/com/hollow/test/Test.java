@@ -8,6 +8,7 @@ import org.hibernate.cfg.Configuration;
 /**
  * @author 刘继涛
  * @version 1.0
+ * 测试单表
  */
 public class Test {
     public static void main(String[] args) {

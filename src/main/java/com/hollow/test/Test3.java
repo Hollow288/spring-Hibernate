@@ -14,6 +14,7 @@ import java.util.Set;
 /**
  * @author 刘继涛
  * @version 1.0
+ * 测试多对多
  */
 public class Test3 {
     public static void main(String[] args) {
