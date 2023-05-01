@@ -4,13 +4,10 @@
 
 <hibernate-mapping>
 
-    <class name="com.hollow.entity.Customer" table="customer">
-<!--        主键映射-->
-        <!--类里的字段-->
+    <class name="com.hollow.entity.Course" table="t_course">
+
         <id name="id" type="java.lang.Integer">
-            <!--表里的字段-->
             <column name="id"></column>
-            <!--主键自增方式-->
             <generator class="identity"></generator>
         </id>
 
@@ -18,9 +15,10 @@
             <column name="name"></column>
         </property>
 
-        <set name="orders" table="orders">
+        <set name="accounts" table="account_course">
             <key column="cid"></key>
-            <one-to-many class="com.hollow.entity.Orders"></one-to-many>
+            <many-to-many class="com.hollow.entity.Account" column="aid"></many-to-many>
         </set>
+
     </class>
 </hibernate-mapping>

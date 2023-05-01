@@ -4,7 +4,7 @@
 
 <hibernate-mapping>
 
-    <class name="com.hollow.entity.Customer" table="customer">
+    <class name="com.hollow.entity.Orders" table="orders">
 <!--        主键映射-->
         <!--类里的字段-->
         <id name="id" type="java.lang.Integer">
@@ -17,10 +17,11 @@
         <property name="name" type="java.lang.String">
             <column name="name"></column>
         </property>
+        
+        <many-to-one name="customer" class="com.hollow.entity.Customer" column="cid">
 
-        <set name="orders" table="orders">
-            <key column="cid"></key>
-            <one-to-many class="com.hollow.entity.Orders"></one-to-many>
-        </set>
+        </many-to-one>
+
+
     </class>
 </hibernate-mapping>

@@ -1,0 +1,5 @@
+这里面People是单表
+
+Order和Customer是一对多
+
+Account和Course 是多对多

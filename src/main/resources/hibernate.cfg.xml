@@ -34,7 +34,11 @@
 <!--        是否自动生成数据表-->
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-            <!--注册实体关系映射文件-->
+            <!--注册实体关系映射文件,注意根据位置设置路径-->
         <mapping resource="People.hbm.xml"></mapping>
+        <mapping resource="Customer.hbm.xml"></mapping>
+        <mapping resource="Orders.hbm.xml"></mapping>
+        <mapping resource="Account.hbm.xml"></mapping>
+        <mapping resource="Course.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>

@@ -26,7 +26,7 @@ public class Test {
         people.setMoney(1000.0);
         session.save(people);
         //这里因为我们java下的xml文件是读不到的，所以要在pom文件加设置
-        //但是这里我按教程的加上后,又显示找不到hibernate.cfg.xml了，索性直接把映射类放到resources下
+        //但是这里我按教程的加上后,又显示找不到hibernate.cfg.xml了，索性直接把映射类的xml放到resources下
         session.beginTransaction().commit();
         session.close();
     }
