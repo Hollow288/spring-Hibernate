@@ -18,7 +18,7 @@
             <column name="name"></column>
         </property>
         
-        <many-to-one name="customer" class="com.hollow.entity.Customer" column="cid">
+        <many-to-one name="customer" class="com.hollow.entity.Customer" column="cid" lazy="proxy">
 
         </many-to-one>
 

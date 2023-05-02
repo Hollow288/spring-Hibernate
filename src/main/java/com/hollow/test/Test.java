@@ -23,7 +23,7 @@ public class Test {
         //获取session
         Session session = sessionFactory.openSession();
         People people = new People();
-        people.setName("张三");
+        people.setName("李四");
         people.setMoney(1000.0);
         session.save(people);
         //这里因为我们java下的xml文件是读不到的，所以要在pom文件加设置

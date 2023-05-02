@@ -2,8 +2,12 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
+<!--可以在这加 package="com.hollow.entity" 后面就不需要写com.hollow.entity了-->
 <hibernate-mapping>
 
+    <!--这里还可以dynamic-insert="true" 和dynamic-update="true" 来开启动态更新和动态添加-->
+    <!--意思就是说我们添加的时候，如果有些字段没写，它就不会去添加或者修改，提高效率-->
+    <!--还可以在这里添加一个where：比如 where ="id = 6" 就可以实现where功能-->
     <class name="com.hollow.entity.Account" table="t_account">
 <!--        主键映射-->
         <!--类里的字段-->

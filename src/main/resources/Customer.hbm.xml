@@ -18,6 +18,8 @@
             <column name="name"></column>
         </property>
 
+        <!--级联删除：这里可以添加一个cascade="delete" 来设置级联删除-->
+        <!--就是删除记录时如果有外键，就把那张表关联的也删了-->
         <set name="orders" table="orders" lazy="true">
             <key column="cid"></key>
             <one-to-many class="com.hollow.entity.Orders"></one-to-many>
