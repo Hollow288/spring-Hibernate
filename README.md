@@ -20,3 +20,37 @@ Account和Course 是多对多
 tostring使得它又会去调用另一个表的实体类的tostring，然后互相调用，最后爆栈，控制台打印的是反复调用查询的错误。
 
 
+补上修改和删除的HQL
+#### 9.修改hql
+
+```
+update Student set name = :newName where id = :idValue
+```
+
+其中，EntityName是要修改的实体类名，propertyName是要修改的属性名，newValue是新的属性值，condition是修改的条件。在条件中可以使用实体类的属性和关键字来构造查询条件
+
+例子：
+
+```
+String hql = "update Student set name = :newName where id = :idValue";
+Query query = session.createQuery(hql);
+query.setParameter("newName", "Tom");
+query.setParameter("idValue", 1);
+int result = query.executeUpdate();
+```
+
+#### 10. 删除
+
+```
+delete from EntityName where condition
+```
+
+EntityName是要删除的实体类名，condition是删除的条件。在条件中可以使用实体类的属性和关键字来构造查询条件
+
+```
+String hql = "delete from Student where id = :idValue";
+    Query query = session.createQuery(hql);
+    query.setParameter("idValue", 1);
+    int result = query.executeUpdate();
+```
+
