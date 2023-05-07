@@ -8,7 +8,7 @@ Account和Course 是多对多
 我现在理解的一个区别是，我们在处理一对多，或者多对多表的时候，处理entity，
 
 使用Mybatis只需要加一个类似于int cid 的字段，来映射外键，
-然后查询的时候需要手动去写sql的left join语句查询。
+然后查询的时候需要手动去写sql的left join语句查询
 
 使用Hibernate则需要在在我们的entity实体类中中定义一个List<OrderItem>类型的属性，
 这个属性可以映射到数据库中的一张订单项表，并通过外键关联到订单表，
